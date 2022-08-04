@@ -1,4 +1,4 @@
-const username = '2kabhishek';
+const username = 'Halip26';
 const maxPages = 2;
 const repoList = document.querySelector('.repo-list');
 const reposSection = document.querySelector('.repos');
@@ -6,7 +6,7 @@ const filterInput = document.querySelector('.filter-repos');
 
 
 // get information from github profile
-const getProfile = async function () {
+const getProfile = async function() {
     const res = await fetch(
         `https://api.github.com/users/${username}`
         // {
@@ -22,7 +22,7 @@ const getProfile = async function () {
 getProfile();
 
 // display infomation from github profile
-const displayProfile = function (profile) {
+const displayProfile = function(profile) {
     const userInfo = document.querySelector('.user-info');
     userInfo.innerHTML = `
         <figure>
@@ -44,7 +44,7 @@ const displayProfile = function (profile) {
 };
 
 // get list of user's public repos
-const getRepos = async function () {
+const getRepos = async function() {
     let repos = [];
     let res;
     for (let i = 1; i <= maxPages; i++) {
@@ -66,7 +66,7 @@ const getRepos = async function () {
 getRepos();
 
 // display list of all user's public repos
-const displayRepos = function (repos) {
+const displayRepos = function(repos) {
     filterInput.classList.remove('hide');
     for (const repo of repos) {
         let listItem = document.createElement('li');
@@ -82,7 +82,7 @@ const displayRepos = function (repos) {
 };
 
 // dynamic search
-filterInput.addEventListener('input', function (e) {
+filterInput.addEventListener('input', function(e) {
     const search = e.target.value;
     const repos = document.querySelectorAll('.repo');
     const searchLowerText = search.toLowerCase();
@@ -132,8 +132,7 @@ const devicons = {
     Perl: '<i class="devicon-perl-plain colored"></i> Perl',
     PHP: '<i class="devicon-php-plain colored"></i> PHP',
     PLSQL: '<i class="devicon-sqlite-plain colored"></i> PLSQL',
-    Processing:
-        '<i class="devicon-processing-plain colored" style="color: #0096D8"></i> Processing',
+    Processing: '<i class="devicon-processing-plain colored" style="color: #0096D8"></i> Processing',
     Python: '<i class="devicon-python-plain colored" style="color: #3472a6"></i> Python',
     R: '<i class="devicon-r-plain colored"></i> R',
     Ruby: '<i class="devicon-ruby-plain colored"></i> Ruby',
