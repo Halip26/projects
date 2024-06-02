@@ -95,6 +95,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: var(--text);
+}
+
 .github-img {
   width: 45px;
   margin-right: 8px;
@@ -206,7 +210,6 @@ h3 {
   border-radius: 30px;
   border: 2px solid var(--accent);
   color: var(--text);
-  transition: 0.2s ease;
 }
 
 .repo-list li a:hover {
