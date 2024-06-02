@@ -25,7 +25,7 @@
   <figure>
     <img src= "images/screenshot.png" alt="projects screenshot" style="width:100%">
     <br/>
-    <figcaption>projects screenshot</figcaption>
+    <figcaption>Preview screenshot</figcaption>
   </figure>
 
 </div>
