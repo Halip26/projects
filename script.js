@@ -1,5 +1,5 @@
 const username = "Halip26";
-const maxPages = 2;
+const maxPages = 3;
 const repoList = document.querySelector(".repo-list");
 const reposSection = document.querySelector(".repos");
 const filterInput = document.querySelector(".filter-repos");
@@ -154,3 +154,8 @@ const devicons = {
   Vue: '<i class="devicon-vuejs-plain colored"></i> Vue',
   null: '<i class="devicon-markdown-original"></i> Markdown',
 };
+
+// Get the current year
+const currentYear = new Date().getFullYear();
+// Set the current year to the span with id "currentYear"
+document.getElementById("currentYear").textContent = currentYear;
